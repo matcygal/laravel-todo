@@ -11,7 +11,12 @@
 <div class="row">
 <div class="col-md-4"><a class="btn btn-info col-md-12" href="/">Go back</a></div>
 <div class="col-md-4"><a class="btn btn-primary col-md-12" href="/todo/{{$todo->id}}/edit">Edit</a></div>
-<div class="col-md-4"><a class="btn btn-danger col-md-12" href="/todo/{{$todo->id}}/delete">Delete</a></div>
+<div class="col-md-4">
+{!! Form::open(['action' => ['TodosController@destroy', $todo->id] ,'method' => 'POST']) !!}
+{{ Form::hidden('_method', 'DELETE') }}
+{{ Form::bsSubmit('Delete', ['class' => 'btn btn-danger col-md-12']) }}
+{!! Form::close() !!}
+</div>
 
 </div>
 

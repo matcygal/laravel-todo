@@ -10,5 +10,6 @@
 {{ Form::bsSubmit('Submit', ['class' => 'btn btn-submit col-md-12']) }}
 {!! Form::close() !!}
 <hr>
-<a class="btn btn-primary col-md-12" href="/todo/{{$todo->id}}/">Go Back</a>
+<br>
+<a class="btn btn-primary col-md-12" href="/todo/{{$todo->id}}/">Go Back</a></div>
 @endsection
