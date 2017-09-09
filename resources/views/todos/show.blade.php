@@ -6,9 +6,15 @@
 </div>
 <div class="well">
 <p>{{$todo->body}}</p>
-</div><div class="container">
-<div class="row"><h6 class="pull-right">created: {{$todo->created_at}}</h6>
-</div></div>
-<a class="btn btn-default col-md-12" href="/">Go back</a>
+</div>
+<div class="row"><h6 class="pull-right">created: {{$todo->created_at}}</h6></div>
+<div class="row">
+<div class="col-md-4"><a class="btn btn-info col-md-12" href="/">Go back</a></div>
+<div class="col-md-4"><a class="btn btn-primary col-md-12" href="/todo/{{$todo->id}}/edit">Edit</a></div>
+<div class="col-md-4"><a class="btn btn-danger col-md-12" href="/todo/{{$todo->id}}/delete">Delete</a></div>
 
+</div>
+
+<hr>
+<br>
 @endsection
